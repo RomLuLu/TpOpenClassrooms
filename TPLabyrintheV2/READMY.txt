@@ -1,0 +1,10 @@
+Version finale du Labyrinthe.
+
+Ce qui peut être fait: 
+	-> charger les cartes jouables 
+	-> sélectionner une partie déjà commencée.
+	-> déplacer le robot
+	-> sauvegarde auto de la carte.
+	-> contole des déplacements de sorte à ne pas pouvoir déplacer les murs.
+
+
