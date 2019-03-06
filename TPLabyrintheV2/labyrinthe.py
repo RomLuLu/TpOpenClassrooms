@@ -108,6 +108,9 @@ class Labyrinthe:
     def winner(self):
         if self.robot == self.out:
             return 'Q'
+        elif self.robot[0] == self.out[0] and self.robot[1] > self.y_max:
+            self.robot = self.out
+            return 'Q'
 
 
 # if __name__ == "__main__":

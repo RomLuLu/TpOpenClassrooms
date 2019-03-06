@@ -5,8 +5,8 @@ from labyrinthe import Labyrinthe
 from map import Map
 
 # CARD MANAGEMENT LOADING THE PROGRAM.
-
-path = r"C:\Users\Romain\labyrinthe\TP\cartes"
+path = os.path.join(os.path.realpath(os.path.dirname(__file__)), 'cartes')
+# path = r"C:\Users\Romain\labyrinthe\TP\cartes"
 list_maps = os.listdir(path)
 # dispay maps list:
 display_maps(list_maps)
@@ -15,11 +15,11 @@ playing_card = selection_carte_player(list_maps)
 print(playing_card)
 
 # link to the map
-path_playing_card = os.path.join("cartes", playing_card)
+path_playing_card = os.path.join(path, playing_card)
 
 # instantiation of map and maze objects.
 
-card_in_court = Map(playing_card)
+card_in_court = Map(playing_card, path)
 labi = Labyrinthe(path_playing_card)
 labi.position_items()
 
