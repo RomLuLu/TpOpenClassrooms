@@ -1,0 +1,15 @@
+Le déroulement du programme:
+    ->Lors du lancement, le jeu devra se dérouler en plusieurs étapes.
+    ->Tout d'abord, la fenêtre devra afficher un écran d'accueil, qui invitera le joueur à choisir un niveau.
+    ->Lorsque le choix sera fait, le jeu devra ensuite être lancé, avec la possibilité de revenir à l'écran d'accueil.
+    ->Lorsque le labyrinthe sera terminé, on devra retrouver l'écran d'accueil, et pouvoir choisir un autre niveau.
+
+Les fonctionnalités du programme:
+    ->L'utilisateur choisira le niveau en tapant sur une touche, par exemple F1, F2...
+    ->La structure du niveau (départ, emplacement des murs, arrivée),
+        devra être enregistrée dans un fichier n1, n2... pour les créer et modifier facilement.
+    ->Le singe sera contrôlé par les touches directionnelles du clavier.
+    ->La fenêtre sera un carré pouvant afficher 15 sprites sur la longueur.
+    ->Le singe devra donc se déplacer de case en case, avec 15 cases sur la longueur de la fenêtre !
+    ->L'utilisateur pourra à tout moment revenir au menu principal pour choisir un autre niveau.
+    ->Le labyrinthe sera terminé lorsque le singe atteindra les bananes.
