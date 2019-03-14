@@ -1,6 +1,7 @@
 import os
 import pygame.locals as c
 
+
 def path_to_images(image=''):
     """Function for all path to the directory images"""
     path = os.path.join(os.path.dirname(__file__), "images\\{}".format(image))
@@ -36,3 +37,10 @@ wall_path = path_to_images('mur.jpg')
 
 # chemin vers les niveaux:
 level1 = path_to_level('level1.txt')
+
+# dictionnaire des mouvements
+
+HAUT = -taille_sprite
+BAS = taille_sprite
+GAUCHE = -taille_sprite
+DROITE = taille_sprite

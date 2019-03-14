@@ -5,8 +5,8 @@ from constantes import *
 
 class Niveau:
 
-    def __init__(self, path_level, screen: pygame.Surface):
-        self.screen = screen
+    def __init__(self, path_level, ecran: pygame.Surface):
+        self.ecran = ecran
         self.path_level = path_level
         # Liste qui conserve toutes les positions de sprites.
         self.structure_level_sprites = []
@@ -14,7 +14,6 @@ class Niveau:
         self.paths = []
         self.start = tuple()
         self.arrival = tuple()
-        self.x_max = self.y_max = sprite_max
 
     def import_map(self):
         x, y = 0, 0
@@ -37,16 +36,13 @@ class Niveau:
                 x, y = 0, y + taille_sprite
 
     def export_map(self):
-        font = pygame.image.load(font_path).convert()
-        self.screen.blit(font, (0, 0))
         for sprite_position in self.structure_level_sprites:
             if sprite_position in self.walls:
                 wall = pygame.image.load(wall_path).convert_alpha()
-                self.screen.blit(wall, sprite_position)
+                self.ecran.blit(wall, sprite_position)
             elif sprite_position == self.start:
                 start = pygame.image.load(star_path).convert_alpha()
-                self.screen.blit(start, sprite_position)
+                self.ecran.blit(start, sprite_position)
             elif sprite_position == self.arrival:
                 arrival = pygame.image.load(arrival_path).convert_alpha()
-                self.screen.blit(arrival, sprite_position)
-        return self.screen
+                self.ecran.blit(arrival, sprite_position)
